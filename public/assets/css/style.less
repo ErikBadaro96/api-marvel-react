@@ -1,0 +1,329 @@
+// out: style.css, compress: true, sourceMap: false
+
+* {
+  padding: 0;
+  margin: 0;
+  vertical-align: baseline;
+  list-style: none;
+  border: 0;
+}
+
+body {
+  background: #e5e5e5;
+
+  header {
+    height: ~"calc(65px - 20px)";
+    background: #fff;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    padding: 10px;
+
+    .menu-principal {
+      max-width: 1160px;
+      height: 100%;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      .img-header {
+        width: 120px;
+        height: 68px;
+      }
+    }
+
+    .user {
+      color: #555555;
+
+      .nome-user {
+        font: normal normal bold 14px/20px "PT Sans Caption";
+        margin: 0 5px 0 0;
+      }
+
+      .cargo-user {
+        font: normal normal normal 14px/20px "PT Sans Caption";
+        margin: 0 5px 0 0;
+      }
+
+      .inicio-user {
+        font: normal normal bold 15px/10px "PT Sans Caption";
+        padding: 7px 6px 6px 6px;
+        border-radius: 4px;
+        &:hover{
+          background: #555555;
+          color: white;
+          outline: auto;
+        }
+        &:focus{
+          background: #555555;
+          color: white;
+          outline: auto;
+        }
+      }
+    }
+  }
+
+  .text-description {
+    max-width: calc(1160px - 80px);
+    padding: 0 40px;
+
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+
+    span {
+      width: ~"calc( 100% / 3 )";
+      font: normal normal normal 12px/16px "PT Sans Caption";
+      color: #8e8e8e;
+
+      @media screen and (max-width: 701px) {
+        &:nth-child(2),
+        &:nth-child(3) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .text-search {
+    max-width: 1130px;
+    margin: 20px auto;
+    color: #555555;
+
+    @media screen and (max-width: 701px) {
+      text-align: center;
+    }
+
+    .text-buscar-personagens {
+      font: normal normal bold 32px/30px "PT Sans Caption";
+    }
+
+    .text-nome-personagem {
+      margin: 10px 0;
+      font: normal normal bold 16px/24px "PT Sans Caption";
+    }
+
+    .search-personagem {
+      margin: 10px 0;
+      border: 1px solid #e5e5e5;
+      border-radius: 4px;
+      height: 32px;
+      width: 295px;
+      &:focus {
+        outline: none;
+      }
+    }
+
+    ::-webkit-input-placeholder {
+      /* Chrome/Opera/Safari */
+      font: italic normal normal 14px/19px "PT Sans Caption";
+      color: #8e8e8e;
+      padding: 15px;
+    }
+
+    .btn-icon {
+      position: absolute;
+      top: 18px;
+      z-index: 10;
+      background: transparent;
+      outline: none;
+      left: 270px;
+    }
+
+    .search-line {
+      position: relative;
+      width: 200px;
+
+      @media screen and (max-width: 701px) {
+        left: 15%;
+      }
+    }
+  }
+
+  .grid-personagens {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px;
+
+    max-width: calc(1130px - 40px);
+    margin: 10px auto;
+    border: 1px solid #ccc;
+    background: #fff;
+    box-shadow: 0px 0px 5px #00000033;
+    border-radius: 5px;
+
+    @media screen and (max-width: 701px) {
+      margin: 10px 20px;
+    }
+
+    .logo-personagem {
+      img {
+        max-width: 48px;
+        margin: 0 20px 0 0;
+      }
+    }
+
+    .nome-personagem {
+      width: calc(((100% / 3) - 48px) - 20px);
+      height: 100%;
+      font: normal normal bold 16px/22px "PT Sans Caption";
+      color: #555555;
+
+      .detalhes-mobile{
+        display:none;
+        float:right;
+      }
+
+      @media screen and (max-width: 701px) {
+        width: calc((100% - 48px) - 20px);
+
+        .detalhes-mobile{
+          display:block;
+        }
+
+      }
+    }
+
+    .series-personagem {
+      width: calc(((100% / 3) - 48px) - 20px);
+      height: 100%;
+
+      span {
+        font: normal normal normal 14px/16px "PT Sans Caption";
+        color: #555555;
+      }
+
+      @media screen and (max-width: 701px) {
+        display: none;
+      }
+    }
+
+    .eventos-personagem {
+      width: calc(((100% / 3) - 48px) - 20px);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+
+      span {
+        font: normal normal normal 14px/16px "PT Sans Caption";
+        color: #555555;
+      }
+      a{
+        float:right;
+      }
+
+      @media screen and (max-width: 701px) {
+        display: none;
+      }
+    }
+  }
+
+  .panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+  }
+
+  footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    color: white;
+    text-align: center;
+    height: 60px;
+    .pagination {
+      display: flex;
+      padding-left: 0;
+      list-style: none;
+      border-radius: 0.25rem;
+      justify-content: center;
+    }
+    .page-link {
+      text-decoration: none;
+      background: #f5f5f5 0% 0% no-repeat padding-box;
+      border: 1px solid #e5e5e5;
+      border-radius: 3px 3px 3px 3px;
+      width: 40px;
+      font: normal normal normal 14px/19px PT Sans;
+      color: #555555;
+      position: relative;
+      display: block;
+      padding: 0.5rem 0.75rem;
+      cursor: pointer;
+      &:focus {
+        background: #167abc;
+        border: 1px solid #167abc;
+        color: white;
+        outline: auto;
+      }
+      &:hover {
+        background: #167abc;
+        border: 1px solid #167abc;
+        color: white;
+      }
+    }
+
+    .arrow-link {
+      text-decoration: none;
+      border-radius: 3px 3px 3px 3px;
+      color: #555555;
+      display: block;
+      padding: 0.5rem 0.75rem;
+      background: transparent;
+      cursor: pointer;
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .page-item {
+      padding: 10px;
+    }
+  }
+
+  .grid-detalhes {
+    display: grid;
+    grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer footer';
+    grid-gap: 10px;
+    padding: 10px;
+    margin: 50px auto;
+    background-color: white;
+
+    .nome-char {
+      text-align: center;
+      padding: 20px 0;
+      font: normal normal normal bold 32px/34px PT Sans;
+      color: #555555;
+      grid-area: header ;
+    }
+    .detalhes-char {
+      text-align: center;
+      padding: 20px 0;
+      grid-area: main;
+      border: 1px solid #555555;
+      font: normal normal normal 20px/30px "PT Sans Caption";
+      color: #555555;
+    }
+    .logo-char { 
+      text-align: center;
+      padding: 20px 0;      
+      grid-area: footer; 
+    }
+
+  }
+  .btn-voltar{
+    display:flex;
+    justify-content: center;
+  } 
+
+
+}
